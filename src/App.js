@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
-import CardsDataThree from './Cards';
-import CardsDataTwo from './cardsData';
+import DisplayCard from './Cards';
+import Blog from './Blog';
 
 //Components
 
@@ -10,8 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <CardsDataTwo />
-        <CardsDataThree />
+        <Blog />
       </div>
     )
   }

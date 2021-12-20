@@ -1,96 +1,25 @@
 import React, { Component } from 'react';
-import CardsDataTwo from './cardsData';
+import Card from './cardsData';
 
-const cardTemplate = [
+const cardList = [
     {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
+        name: 'lakjsdf',
+        tag: '@lakjsdf'
     },
     {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
-    {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
-    {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
-    {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
-    {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
-    {
-        id: 1,
-        image: 'https://source.unsplash.com/h-ACUrBngrw/1280x720',
-        avatar: 'https://avatars.dicebear.com/api/initials/john%20doe.svg',
-        user: {
-            name: 'Okinami',
-            handle: 'twitterid',
-            title: 'Lead Developer'
-        },
-        content: 'The Beast stumbled in the dark for it could no longer see the path. It started to fracture and weaken, trying to reshape itself into the form of metal. Even the witches would no longer lay eyes upon it, for it had become hideous and twisted.'
-    },
+        name: 'kela',
+        tag: '@kela'
+    }
 ]
 
-const displayCardData = cardTemplate.map((c, idx) => {
+const displayCardData = cardList.map((c, idx) => {
     return (
-        <CardsDataTwo key={idx} index={idx} image={c.image} avatar={c.avatar} user={c.user} content={c.content} />
-    );
-});
+        <Card key={idx} index={idx} name={c.name} user={c.tag} />
+    )
+})
 
 
-
-
-class CardsDataThree extends Component {
+class DisplayCard extends Component {
     render() {
         return (
             <div>
@@ -135,7 +64,7 @@ class CardsDataThree extends Component {
                     <div className="section">
                         <div className="columns">
                             <div className="column has-text-centered">
-                                <h1 className="title" style="color: ghostwhite;">Bulma Card Layout Template</h1>
+                                {/* <h1 className="title" style="color: ghostwhite;">Bulma Card Layout Template</h1> */}
                             </div>
                         </div>
                         <div id="app" className="row columns is-multiline">
@@ -154,12 +83,8 @@ class CardsDataThree extends Component {
                                                 </figure>
                                             </div>
                                             <div className="media-content">
-                                                <CardsDataTwo image={cardTemplate.image} avatar={cardTemplate.avatar} user={cardTemplate.user} content={cardTemplate.content} />
-                                                {/* <CardsData key={idx} index={idx} image={c.image} avatar={c.avatar} user={c.user.name} content={c.content} />
-                                                <CardsData key={idx} index={idx} image={c.image} avatar={c.avatar} user={c.user.name} content={c.content} /> */}
                                             </div>
                                             <div className="content">
-                                                {/* <CardsData key={idx} index={idx} image={c.image} avatar={c.avatar} user={c.user.name} content={c.content} /> */}
                                                 <div className="background-icon"><span className="icon-twitter"></span></div>
                                             </div>
                                         </div>
@@ -183,7 +108,6 @@ class CardsDataThree extends Component {
                                 </p>
                             </div>
                         </div>
-                        {displayCardData}
                     </footer>
                 </div>
             </div>
@@ -191,4 +115,4 @@ class CardsDataThree extends Component {
     }
 }
 
-export default CardsDataThree;
+export default DisplayCard;
